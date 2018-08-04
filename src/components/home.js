@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 import header from './header';
-import Card from './card'
+import Card from './card';
 
-class Home extends Component {
+export default class Home extends Component {
   render() {
     return (
       <div>
@@ -13,5 +13,3 @@ class Home extends Component {
     );
   }
 }
-
-export default Home;

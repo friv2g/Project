@@ -1,10 +1,10 @@
 import React from 'react';
 
-const header = (title = 'Bottega Madlibs', description = 'um...um..um..um..um..um..um..um..um..um..um..um..') => {
+const header = () => {
     return (
         <div className="header">
-            <h1>{title}</h1>
-            <p>{description}</p>
+            <h1>Bottega Madlibs</h1>
+            <p>Fill out the fields and a madlibs will be generated for you, enjoy!</p>
         </div>
     )
 }
