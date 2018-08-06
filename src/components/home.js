@@ -6,7 +6,7 @@ import Card from './card';
 export default class Home extends Component {
   render() {
     return (
-      <div>
+      <div className="home">
         { header() }
         <Card />
       </div>

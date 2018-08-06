@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+*{
+    font-family: 'Roboto Mono';
+}
+.home{
+    display: grid;
+    // justify-content: center;
+    justify-content: center;
+    grid-template-rows: [header-s] 100px [header-e card-s] 800px [card-e];
+
+}
+.header{
+    align-self: center;
+    text-align: center;
+    color: #26a71a;
+    &__skew1{
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+        clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+
+        z-index: -10;
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 100vh;
+        width:100vw;
+        background-color: #444444;
+    }
+    &__skew2{
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 27%, 0 50%);
+        clip-path: polygon(0 0, 100% 0%, 100% 27%, 0 50%);
+
+        z-index: -11;
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 110vh;
+        width:100vw;
+        background-color: #26a71a;
+    }
+}
+.card{
+    width: 1100px;
+    border-radius: 7px;
+    display: grid;
+    grid-template-rows: 1fr 50px 200px;
+
+    &__inputs{
+        display: grid;
+        background-color: rgb(207, 207, 207);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    button{
+        cursor: pointer;
+        width: 150px;
+        border-radius: 7px;
+        background-color: rgb(209, 194, 59);
+        justify-self: center;
+        box-shadow: none;
+    }
+    button:focus{
+        outline: none;
+    }
+}
+
+.input {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    &__title {
+        grid-column: 2;
+        text-align: center;
+    }
+    input {
+        width: 100px;
+        height: 20px;
+        grid-column: 2;
+    }
+    &__number {
+        grid-column: 1;
+        grid-row: 1/3;
+        align-self: center;
+        border-radius: 50%;
+        border: 2px solid black;
+        text-align: center;
+        margin-right: 10px;
+        font-family: 'Roboto Condensed';
+    }
+    .madlib{
+        grid-row: 3/4;
+    }
+}
